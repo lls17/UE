@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		 <title>圣杯布局/双飞翼布局</title>
+		 <style>
+		 	*{
+		 		margin: 0;
+		 		padding: 0;
+		 		text-align: center;
+		 	}
+		 	#parents{
+		 		width: 600px;
+		 		border: 2px solid black;
+				margin: 10px auto;
+		 	}
+		 	#top{
+		 		background: #666666;
+		 		height: 50px;
+		 	}
+		 	#main{
+		 		padding-left: 100px;
+		 		padding-right: 150px;
+		 		overflow: hidden;
+		 	}
+		 	#left, #center, #right{
+		 		padding-bottom: 2000px;
+		 		margin-bottom: -2000px;
+		 	}
+		 	#left{
+		 		background: #E79F6D;
+		 		float: left;
+		 		width: 100px;
+		 		position: relative;
+		 		left: -100px;
+		 	}
+		 	#content{
+		 		background: lightcoral;
+		 		float: left;
+		 		width: 100%;
+		 		margin-left: -100px;
+		 	}
+		 	#right{
+		 		background: #77BBDD;
+		 		float: left;
+		 		width: 150px;
+		 		margin-left: -150px;
+		 		position: relative;
+		 		left: 150px;
+		 	}
+		 	#foot{
+		 		background: #666;
+		 		clear: both;
+		 		height: 50px;
+		 	}
+		 </style>
+	</head>
+	<body>
+		 <div id="parents">
+            <div id="top">这是Top!</div>
+            <div id="main">
+                <div id="left">这是Left!</div>
+                <div id="content">
+                	这是Content!<br >
+                	这是Content!<br >
+                	这是Content!<br >
+                	这是Content!<br >
+                </div>
+                <div id="right">这是Right!</div>
+            </div>
+            <div id="foot">这是Foot!</div>
+        </div>
+	</body>
+</html>

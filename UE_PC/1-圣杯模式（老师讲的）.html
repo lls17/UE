@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>圣杯模式</title>
+		<style>
+			.box{
+				overflow: hidden;
+			}
+			p{
+				height: 20px;
+				line-height: 20px;
+			}
+			.aside{
+				float: left;
+				width: 200px;
+				margin-left: -100%;
+				background-color: greenyellow;
+			}
+			.main{
+				position: relative;
+				left: 210px;
+				float: left;
+				width: 100%;
+				background-color: paleturquoise;
+			}
+			/*如下margin负补偿，可使不同列同高！*/
+			.main, .aside{
+				padding-bottom: 2000px;
+				margin-bottom: -2000px;
+			}
+		</style>
+	</head>
+	<body>
+		<p>圣杯模式：左、右定宽，中间自适应！</p>
+		<p>注1：结构中“从右向左”写！</p>
+		<p>注2：左-中-右不同列内容，利用margin负补偿保持一致同高！</p>
+		<hr />
+		<div class="box">
+			<div class="main">
+				<p>主体区域Main</p>
+			</div>
+			<div class="aside">
+				<p>侧边区域Aside</p>
+				<p>侧边区域Aside</p>
+				<p>侧边区域Aside</p>
+				<p>侧边区域Aside</p>
+			</div>
+		</div>
+	</body>
+</html>
